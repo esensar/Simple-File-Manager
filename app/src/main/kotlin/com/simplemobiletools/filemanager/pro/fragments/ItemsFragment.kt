@@ -524,7 +524,7 @@ class ItemsFragment(context: Context, attributeSet: AttributeSet) : MyViewPagerF
 
     override fun breadcrumbClicked(id: Int) {
         if (id == 0) {
-            StoragePickerDialog(activity as SimpleActivity, currentPath, context!!.config.enableRootAccess, true) {
+            StoragePickerDialog(activity as SimpleActivity, currentPath, context!!.config.enableRootAccess, false, true) {
                 getRecyclerAdapter()?.finishActMode()
                 openPath(it)
             }
